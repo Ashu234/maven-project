@@ -31,13 +31,13 @@ stages{
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                        bat "winscp -i C:/Users/Kharayat/Desktop/Jenkins/MyTomcatDemoKey.pem **/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
+                        bat "WinSCP -i C:/Users/Kharayat/Desktop/Jenkins/MyTomcatDemoKey.pem **/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
                     }
                 }
 
                 stage ("Deploy to Production"){
                     steps {
-                        bat "winscp -i C:/Users/Kharayat/Desktop/Jenkins/MyTomcatDemoKey.pem **/target/*.war ec2-user@${params.tomcat_prod}:/var/lib/tomcat7/webapps"
+                        bat "WinSCP -i C:/Users/Kharayat/Desktop/Jenkins/MyTomcatDemoKey.pem **/target/*.war ec2-user@${params.tomcat_prod}:/var/lib/tomcat7/webapps"
                     }
                 }
             }
