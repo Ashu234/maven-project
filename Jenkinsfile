@@ -37,7 +37,7 @@ stages{
 
                 stage ("Deploy to Production"){
                     steps {
-                        bat "pscp -i C:/Users/Kharayat/Desktop/Jenkins/MyTomcatKey.ppk C:/Users/Kharayat/Desktop/Jenkins/webapp.war ec2-user@${params.tomcat_prod}:/var/lib/tomcat7/webapps"
+                        bat "echo y | pscp -i C:/Users/Kharayat/Desktop/Jenkins/MyTomcatKey.ppk C:/Users/Kharayat/Desktop/Jenkins/webapp.war ec2-user@${params.tomcat_prod}:/var/lib/tomcat7/webapps"
                     }
                 }
             }
