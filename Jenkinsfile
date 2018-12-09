@@ -1,6 +1,8 @@
 pipeline {
     agent any
     
+    echo %PATH%
+    
     tools {
         maven 'localMaven'
     }
