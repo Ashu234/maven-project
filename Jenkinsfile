@@ -31,7 +31,7 @@ stages{
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                        bat "pscp -i C:/Users/Kharayat/Desktop/Jenkins/MyTomcatKey.ppk C:/Program Files (x86)/Jenkins/workspace/FullyAutomatedAWS/webapp/target/webapp.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
+                        bat "echo y | pscp -i C:/Users/Kharayat/Desktop/Jenkins/MyTomcatKey.ppk C:/Program Files (x86)/Jenkins/workspace/FullyAutomatedAWS/webapp/target/webapp.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
                     }
                 }
 
